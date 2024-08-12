@@ -1,0 +1,28 @@
+{
+  "name": "enable-decorative-images",
+  "version": "0.1.0",
+  "description": "Easily make Image blocks decorative.",
+  "author": "Nick Diego",
+  "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ndiego/enable-decorative-images.git"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:js:src": "wp-scripts lint-js ./src",
+    "lint:js:src:fix": "wp-scripts lint-js ./src --fix",
+    "start": "wp-scripts start",
+    "packages-update": "wp-scripts packages-update",
+    "update-pot": "wp i18n make-pot . languages/enable-decorative-images.pot --exclude=src",
+    "plugin-zip": "wp-scripts plugin-zip"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^28.5.0"
+  }
+}
