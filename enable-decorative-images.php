@@ -75,10 +75,10 @@ add_filter( 'render_block_core/image', 'edi_add_decorative_role_to_image_block',
  * @param string $block_type The name of the block type being registered.
  * @return array             Modified block type arguments.
  */
-function edi_add_is_decorative_attribute( $args, $block_name ) {
+function edi_add_is_decorative_attribute( $args, $block_type ) {
 
     // Only add the attribute to the Image block.
-    if ( $block_name === 'core/image' ) {
+    if ( $block_type === 'core/image' ) {
         if ( ! isset( $args['attributes'] ) ) {
             $args['attributes'] = array();
         }
