@@ -45,6 +45,28 @@ addFilter(
 );
 
 /**
+ * Render the help text for the accessibility toggle.
+ */
+const helpText = (
+	<>
+		{ __(
+			"Decorative images don't add information to the content of a page. Enabling removes alternative text and sets the image's role to presentation. ",
+			'enable-decorative-images'
+		) }
+		<ExternalLink
+			href={
+				'https://www.w3.org/WAI/tutorials/images/decorative/'
+			}
+		>
+			{ __(
+				'Learn more.',
+				'enable-decorative-images'
+			) }
+		</ExternalLink>
+	</>
+);
+
+/**
  * Filter the BlockEdit object and add the "Is Decorative" toggle to Image blocks.
  *
  * @since 0.1.0
@@ -60,25 +82,6 @@ function addImageInspectorControls( BlockEdit ) {
 		}
 
 		const { alt, isDecorative } = attributes;
-
-		const helpText = (
-			<>
-				{ __(
-					"Decorative images don't add information to the content of a page. Enabling removes alternative text and sets the image's role to presentation. ",
-					'enable-decorative-images'
-				) }
-				<ExternalLink
-					href={
-						'https://www.w3.org/WAI/tutorials/images/decorative/'
-					}
-				>
-					{ __(
-						'Learn more.',
-						'enable-decorative-images'
-					) }
-				</ExternalLink>
-			</>
-		);
 
 		return (
 			<>
