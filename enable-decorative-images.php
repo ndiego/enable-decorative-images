@@ -30,6 +30,11 @@ function edi_enqueue_block_editor_assets() {
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
+
+	wp_set_script_translations(
+		'enable-decorative-images-editor-scripts',
+		'enable-decorative-images'
+	);
 }
 add_action( 'enqueue_block_editor_assets', 'edi_enqueue_block_editor_assets' );
 
